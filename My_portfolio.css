@@ -249,3 +249,52 @@ footer {
 .footer-icons {
     color: white;
 }
+
+/* GLOBAL RESPONSIVE FONT SCALING */
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;  /* scales ALL text down */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 82%; /* even smaller on small phones */
+  }
+}
+/* Prevent layout from breaking */
+* {
+  box-sizing: border-box;
+}
+
+section, div, .container, .about-content, .skills, .projects {
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar,
+.row,
+.flex,
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* forces items to drop instead of overlapping */
+}
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4.5vw, 2.2rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
